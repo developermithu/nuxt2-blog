@@ -37,7 +37,7 @@
       <nuxt-content :document="article" class="text-gray-700 text-sm py-5" />
     </article>
 
-<!-- Prev Next Button -->
+    <!-- Prev Next Button -->
     <prev-next :prev="prev" :next="next" />
 
     <Footer />
@@ -46,6 +46,19 @@
 
 <script>
 export default {
+  head() {
+    return {
+      title: this.article.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.article.description,
+        },
+      ],
+    };
+  },
+
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.slug).fetch();
 

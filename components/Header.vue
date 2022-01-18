@@ -1,5 +1,5 @@
 <template>
-  <div class=" bg-indigo-700 text-white px-8 py-3">
+  <div class=" bg-gray-700 text-white px-8 py-3">
       <div class="flex justify-between items-center">
           <!-- Logo -->
           <div class="log font-bold uppercase"> 
